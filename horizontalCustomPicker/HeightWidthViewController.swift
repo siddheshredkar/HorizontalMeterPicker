@@ -122,7 +122,7 @@ extension HeightWidthViewController:UICollectionViewDataSource,UICollectionViewD
         print("\(array[0]) ,\(array[1])")
         heightLbl.text = "\(array[0])' \(array[1])''"
         
-         print("currentPage \(heightMeasure.description)")
+        print("currentPage \(heightMeasure.description)")
     }
     
   
