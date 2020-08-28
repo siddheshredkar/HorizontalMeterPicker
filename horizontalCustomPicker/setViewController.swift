@@ -36,7 +36,11 @@ class setViewController: UIViewController {
 extension setViewController:setMeasure{
     
     func displayHeight(height:CGFloat) {
-        heightLbl.text = "HEIGHT : " + String(format: "%.1f", height)
+        let str = String(format: "%.1f", height)
+               let array = str.components(separatedBy: ".")
+               print("\(array[0]) ,\(array[1])")
+               heightLbl.text = "HEIGHT : \(array[0])' \(array[1])''"
+        
     }
     
     

@@ -33,7 +33,11 @@ class HeightWidthViewController: UIViewController {
         let screenWidthHalf = self.heightPickerView.frame.width/2
         let numberOfBlocks = screenWidthHalf / oneInch
         middleMeasure = (numberOfBlocks/12)
-        heightLbl.text =    String(format: "%.1f", middleMeasure)
+        heightMeasure = middleMeasure
+        let str = String(format: "%.1f", middleMeasure)
+        let array = str.components(separatedBy: ".")
+        print("\(array[0]) ,\(array[1])")
+        heightLbl.text = "\(array[0])' \(array[1])''"
     }
     
     private func setupCollectionView(){
@@ -112,7 +116,12 @@ extension HeightWidthViewController:UICollectionViewDataSource,UICollectionViewD
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offset = scrollView.contentOffset.x
         heightMeasure = offset/150 + middleMeasure
-        heightLbl.text =  String(format: "%.1f", heightMeasure)
+        
+        let str = String(format: "%.1f", heightMeasure)
+        let array = str.components(separatedBy: ".")
+        print("\(array[0]) ,\(array[1])")
+        heightLbl.text = "\(array[0])' \(array[1])''"
+        
          print("currentPage \(heightMeasure.description)")
     }
     
