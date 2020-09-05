@@ -32,7 +32,7 @@ class HeightWidthViewController: UIViewController {
     private func calculculateMiddleMeasure(){
         let screenWidthHalf = self.heightPickerView.frame.width/2
         let numberOfBlocks = screenWidthHalf / oneInch
-        middleMeasure = (numberOfBlocks/12)
+        middleMeasure = (numberOfBlocks/10) - 0.2
         heightMeasure = middleMeasure
         let str = String(format: "%.1f", middleMeasure)
         let array = str.components(separatedBy: ".")
