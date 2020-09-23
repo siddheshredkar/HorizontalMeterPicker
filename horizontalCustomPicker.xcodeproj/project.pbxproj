@@ -16,6 +16,10 @@
 		E02B2E8124F81BE300B8DC4A /* heightCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02B2E8024F81BE300B8DC4A /* heightCollectionViewCell.swift */; };
 		E035498A24F95438005423F2 /* cardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035498924F95438005423F2 /* cardView.swift */; };
 		E035498C24F95B8D005423F2 /* setViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035498B24F95B8D005423F2 /* setViewController.swift */; };
+		E043584A251B52F2001DD972 /* HeightPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0435849251B52F2001DD972 /* HeightPickerViewController.swift */; };
+		E043584C251B544C001DD972 /* MainMeasureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E043584B251B544C001DD972 /* MainMeasureViewController.swift */; };
+		E043584E251B55DC001DD972 /* HeightCmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E043584D251B55DC001DD972 /* HeightCmViewController.swift */; };
+		E0435850251B690F001DD972 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = E043584F251B690F001DD972 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		E02B2E8024F81BE300B8DC4A /* heightCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heightCollectionViewCell.swift; sourceTree = "<group>"; };
 		E035498924F95438005423F2 /* cardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardView.swift; sourceTree = "<group>"; };
 		E035498B24F95B8D005423F2 /* setViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setViewController.swift; sourceTree = "<group>"; };
+		E0435849251B52F2001DD972 /* HeightPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightPickerViewController.swift; sourceTree = "<group>"; };
+		E043584B251B544C001DD972 /* MainMeasureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMeasureViewController.swift; sourceTree = "<group>"; };
+		E043584D251B55DC001DD972 /* HeightCmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightCmViewController.swift; sourceTree = "<group>"; };
+		E043584F251B690F001DD972 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,10 @@
 				E02B2E8024F81BE300B8DC4A /* heightCollectionViewCell.swift */,
 				E035498924F95438005423F2 /* cardView.swift */,
 				E035498B24F95B8D005423F2 /* setViewController.swift */,
+				E0435849251B52F2001DD972 /* HeightPickerViewController.swift */,
+				E043584B251B544C001DD972 /* MainMeasureViewController.swift */,
+				E043584D251B55DC001DD972 /* HeightCmViewController.swift */,
+				E043584F251B690F001DD972 /* File.swift */,
 			);
 			path = horizontalCustomPicker;
 			sourceTree = "<group>";
@@ -147,12 +159,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E043584C251B544C001DD972 /* MainMeasureViewController.swift in Sources */,
+				E043584A251B52F2001DD972 /* HeightPickerViewController.swift in Sources */,
 				E02B2E6B24F8152D00B8DC4A /* AppDelegate.swift in Sources */,
 				E02B2E8124F81BE300B8DC4A /* heightCollectionViewCell.swift in Sources */,
 				E02B2E6D24F8152D00B8DC4A /* SceneDelegate.swift in Sources */,
+				E0435850251B690F001DD972 /* File.swift in Sources */,
 				E035498C24F95B8D005423F2 /* setViewController.swift in Sources */,
 				E02B2E7F24F815F500B8DC4A /* HeightWidthViewController.swift in Sources */,
 				E035498A24F95438005423F2 /* cardView.swift in Sources */,
+				E043584E251B55DC001DD972 /* HeightCmViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

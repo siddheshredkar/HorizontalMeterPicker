@@ -30,10 +30,12 @@ class HeightWidthViewController: UIViewController {
     
     
     private func calculculateMiddleMeasure(){
-        let screenWidthHalf = self.heightPickerView.frame.width/2
+        let screenWidthHalf = self.view.frame.width/2
         let numberOfBlocks = screenWidthHalf / oneInch
-        middleMeasure = (numberOfBlocks/10) - 0.2
+        middleMeasure = (numberOfBlocks/10) - 0.05
+        print(middleMeasure)
         heightMeasure = middleMeasure
+        
         let str = String(format: "%.1f", middleMeasure)
         let array = str.components(separatedBy: ".")
         print("\(array[0]) ,\(array[1])")
@@ -115,7 +117,7 @@ extension HeightWidthViewController:UICollectionViewDataSource,UICollectionViewD
      
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offset = scrollView.contentOffset.x
-        heightMeasure = offset/150 + middleMeasure
+        heightMeasure = offset/(oneInch * 10) + middleMeasure
         
         let str = String(format: "%.1f", heightMeasure)
         let array = str.components(separatedBy: ".")
