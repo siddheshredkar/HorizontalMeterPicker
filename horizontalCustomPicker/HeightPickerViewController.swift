@@ -21,6 +21,7 @@ class HeightPickerViewController: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             self.navigationController?.navigationBar.isHidden = true
+            print(self.heightPickerView.frame.width)
             setupCollectionView()
             setupCollectionViewLayout()
             calculculateMiddleMeasure()
@@ -90,7 +91,7 @@ class HeightPickerViewController: UIViewController {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "heightCollectionViewCell", for: indexPath) as! heightCollectionViewCell
             let center = self.view.convert(collectionView.center, to: collectionView)
             let index = collectionView.indexPathForItem(at: center)
-            print(index)
+          //  print(index)
             
             cell.mView.isHidden = true
             cell.pointFiveMmView.isHidden = true
@@ -114,16 +115,40 @@ class HeightPickerViewController: UIViewController {
         }
          
         func scrollViewDidScroll(_ scrollView: UIScrollView) {
-            let offset = scrollView.contentOffset.x
-            heightMeasure = offset/(oneInch * 12) + middleMeasure
+            let offset = scrollView.contentOffset.x + (self.view.frame.width/2) - 7.5
+            print(offset)
+            heightMeasure = (offset/(oneInch * 12))
+            print(heightMeasure)
+            let deci = heightMeasure.fraction
+            print(deci)
             
-            let str = String(format: "%.1f", heightMeasure)
+            let jinay = deci * 12
+            let jinayRound = String(format: "%.0f", jinay)
+            print(jinayRound)
+           // let inch = heightMeasure -
+           
+            let middlevalue = heightMeasure
+            print(middlevalue)
+            let midWhole = String(format: "%.0f", heightMeasure)
+            
+            let str = String(format: "%.1f", middlevalue)
             let array = str.components(separatedBy: ".")
             print("\(array[0]) ,\(array[1])")
             heightLbl.text = "\(array[0])' \(array[1])''"
             
-            print("currentPage \(heightMeasure.description)")
+            if jinayRound == "12"{
+                heightLbl.text = "\(array[0])' \(11) ' '"
+            }else{
+                heightLbl.text = "\(array[0])' \(jinayRound) ' '"
+            }
+            
+            
+            
+           // print("currentPage \(heightMeasure.description)")
         }
       
 
 }
+
+
+

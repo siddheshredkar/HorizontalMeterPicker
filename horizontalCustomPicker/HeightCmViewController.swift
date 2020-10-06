@@ -110,6 +110,7 @@ class HeightCmViewController: UIViewController {
          
         func scrollViewDidScroll(_ scrollView: UIScrollView) {
             let offset = scrollView.contentOffset.x
+            print(offset)
             heightMeasure = (offset/(oneInch * 2) + middleMeasure)
             
             let str = String(format: "%.1f", heightMeasure)
